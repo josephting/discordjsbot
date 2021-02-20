@@ -5,7 +5,7 @@ require('dotenv').config()
 
 const client = new CommandoClient({
     commandPrefix: '!',
-    owner: '98477133139054592'
+    owner: process.env.OWNER_ID
 })
 
 client.registry
