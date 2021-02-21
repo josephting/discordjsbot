@@ -1,5 +1,6 @@
 const { CommandoClient } = require('discord.js-commando')
 const path = require('path')
+const tasks = require('./tasks')
 
 require('dotenv').config()
 
@@ -19,6 +20,7 @@ client.registry
 
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}! (${client.user.id})`)
+    tasks.start(client)
 })
 
 client.on('error', console.error)
